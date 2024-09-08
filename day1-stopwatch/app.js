@@ -7,7 +7,7 @@ pausePlay.addEventListener("click", (e) => {
   e.preventDefault();
   if (i.classList.contains("fa-play")) {
     i.classList.replace("fa-play", "fa-pause");
-    id = setInterval(startCount, 1100);
+    id = setInterval(startCount, 950);
     clearInterval(id2);
     text.style.display = "block";
   } else {
