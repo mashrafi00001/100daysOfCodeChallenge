@@ -1,0 +1,312 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #111;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+}
+
+header {
+    width: 100%;
+    padding: 30px;
+    border-bottom: 1px solid #545353;
+}
+
+.converters-container {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    min-height: min-content;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.header {
+    padding-left: 10px;
+    padding-right: 50px;
+    padding-top: 20px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.header h4 span {
+    margin-left: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #aaa;
+}
+
+.header h4 {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.header i {
+    font-size: 20px;
+    padding: 7px;
+    background-color: aqua;
+    border-radius: 50%;
+    color: rgb(40, 185, 185);
+}
+
+.header i:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 60px;
+    border: none;
+    outline: none;
+    background-color: #222;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: right;
+    padding-right: 20px;
+    caret-color: aqua;
+}
+
+.keyboard {
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    padding: 10px;
+    grid-gap: 10px;
+    max-height: 400px;
+}
+
+input[type="text"]::placeholder {
+    color: #aaa;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: right;
+}
+
+.keyboard div {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(76, 77, 77);
+    border-radius: 50%;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.keyboard div:hover {
+    opacity: 0.8;
+}
+
+.keyboard div.operator {
+    background-color: rgb(40, 185, 185);
+}
+
+.currSpan {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#close{
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    color: aqua;
+}
+
+input {
+    width: 100%;
+}
+
+input[type="search"] {
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: #222;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 900;
+    caret-color: aqua;
+}
+
+section.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    z-index: 2;
+    display: block;
+    scale: 0;
+    padding: 10px;
+}
+
+.modal-content {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #111;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+}
+
+.modal-content h2 {
+    margin-top: 20px;
+    border-bottom: 1px solid #545353;
+    width: 300px;
+}
+
+.modal-content h2:hover{
+    cursor: pointer;
+}
+
+.modal-content .search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    margin-top: 20px;
+    padding: 20px 10px;
+}
+
+.search-container i {
+    font-size: 20px;
+    margin-left: 5px;
+    padding: 7px;
+    border-radius: 50%;
+    color: rgb(40, 185, 185);
+}
+.curr{
+    width: 100%;
+}
+.curr h2{
+    width: 100%;
+}
+
+@media (min-width: 400px) {
+    header h2 {
+        font-size: 25px;
+    }
+
+    .header h4 {
+        font-size: 20px;
+    }
+
+    .header i {
+        font-size: 20px;
+    }
+
+    .keyboard div {
+        margin-left: 30px;
+    }
+}
+
+@media (min-width: 300px) {
+    header h2 {
+        font-size: 16px;
+    }
+
+    .header h4 {
+        font-size: 12px;
+    }
+
+    .header i {
+        font-size: 12px;
+    }
+
+    .keyboard div {
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 600px) {
+    header h2 {
+        font-size: 25px;
+    }
+
+    .header h4 {
+        font-size: 20px;
+    }
+
+    .header i {
+        font-size: 20px;
+    }
+
+    .keyboard div {
+        margin-left: 40px;
+    }
+}
+
+@media (min-width: 800px) {
+    header h2 {
+        font-size: 30px;
+    }
+
+    .header h4 {
+        font-size: 25px;
+    }
+
+    .header i {
+        font-size: 25px;
+    }
+
+    .keyboard div {
+        margin-left: 40px;
+    }
+}
+
+@media (min-width: 1000px) {
+    header h2 {
+        font-size: 35px;
+    }
+
+    .header h4 {
+        font-size: 30px;
+    }
+
+    .header i {
+        font-size: 30px;
+    }
+
+    .keyboard {
+        grid-gap: 40px;
+    }
+
+    .keyboard div {
+        margin-left: 150px;
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange rate</title>
+    <meta name="description" content="Exchange rate software inspired from android">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <header>
+        <h2>Exchange rate</h2>
+    </header>
+    <section class="converters-container">
+        <div class="converter-input-header-container">
+            <div>
+                <div class="header">
+                    <h4 id="forInput1h4">US Dollar <span class="currSpan">USD</span></h4>
+                    <i class="fa-solid fa-arrow-right" id="forInput1"></i>
+                </div>
+                <input type="text" name="" id="input1" placeholder="1" autocomplete="off">
+            </div>
+            <div>
+                <div class="header">
+                    <h4 id="forInput2h4">Bangladeshi Taka <span class="currSpan">BDT</span></h4>
+                    <i class="fa-solid fa-arrow-right" id="forInput2"></i>
+                </div>
+                <input type="text" name="" id="input2" placeholder="119.5" autocomplete="off">
+            </div>
+    </section>
+    <section class="keyboard">
+        <div class="operator" data-operation="ac">AC</div>
+        <div class="operator" data-operation="delete"><i class="fa-solid fa-delete-left" data-operation="delete"></i></div>
+        <div class="operator" data-operation="mul"><i class="fa-solid fa-xmark" data-operation="mul"></i></div>
+        <div class="operator" data-operation="divide"><i class="fa-solid fa-divide" data-operation="divide"></i></div>
+        <div class="number">7</div>
+        <div class="number">8</div>
+        <div class="number">9</div>
+        <div class="operator" data-operation="subtract"><i class="fa-solid fa-subtract" data-operation="subtract"></i></div>
+        <div class="number">4</div>
+        <div class="number">5</div>
+        <div class="number">6</div>
+        <div class="operator" data-operation="add"><i class="fa-solid fa-plus" data-operation="add"></i></div>
+        <div class="number">1</div>
+        <div class="number">2</div>
+        <div class="number">3</div>
+        <div class="number">00</div>
+        <div class="number">0</div>
+        <div class="number">.</div>
+    </section>
+    <section class="modal">
+        <div class="modal-content">
+            <i class="fa-solid fa-xmark" id="close"></i>
+            <div class="search-container">
+                <i class="fa-solid fa-search"></i>
+                <input type="search" name="" id="search" class="search" autocomplete="off" placeholder="currency">
+            </div>
+            <div class="curr" id="countries"></div>
+        </div>
+    </section>
+    <script type="module" src="app.js" defer></script>
+</body>
+
+</html>
