@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users data table - CRUD</title>
+    <link rel="stylesheet" href="app.css">
+    <meta name="description" content="Users data table - CRUD">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <h1>Users data table - CRUD</h1>
+    <div class="modal">
+        <h3>Are you sure you want to delete the row ?</h3>
+        <div class="btns">
+            <button id="deleteConfirm">Delete</button>
+            <button id="deleteCancel">Cancel</button>
+        </div>
+    </div>
+    <main>
+        <section class="table-container">
+            <table>
+                <thead class="table-head">
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody class="table-body">
+                  
+
+                </tbody>
+            </table>
+        </section>
+        <section class="form-container">
+            <!-- <i class="fa-solid fa-xmark" id="close"></i> -->
+            <form>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" autocomplete="off" placeholder="Enter the name" required>
+
+                <label for="age">Age</label>
+                <input type="text" name="age" id="age" autocomplete="off" placeholder="Enter the age" required>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" autocomplete="off" placeholder="Enter the email" required>
+
+                <button type="submit" id="submit">Submit</button>
+                <button type="submit" id="updateRowMain" class="updateRowMain">Update</button>
+            </form>
+        </section>
+    </main>
+    <script src="app.js" defer></script>
+</body>
+
+</html>

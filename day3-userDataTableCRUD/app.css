@@ -1,0 +1,507 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: #070016; */
+    position: relative;
+    background-image: linear-gradient(90deg, #0e002d 0%, #070016 100%, #120136 100%);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: white;
+}
+
+.root {
+    margin: 10px;
+    padding: 30px 40px;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 5px solid #ffffff;
+    min-width: 150px;
+}
+
+th {
+    background-color: #222;
+    color: rgb(101, 251, 251);
+}
+
+td {
+    background-color: #111;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 900;
+    color: #ffffff;
+    background-color: #222;
+    cursor: pointer;
+    color: aqua;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+h1 {
+    width: 100%;
+    text-align: left;
+    border-bottom: 3px solid #ffffff;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: rgb(31, 253, 253);
+}
+
+h1::first-letter {
+    font-size: 50px;
+}
+
+main {
+    position: relative;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.form-container {
+    position: relative;
+    margin-top: 20px;
+    margin-right: 30px;
+    background-color: #282828;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.form-container i{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: rgb(101, 251, 251);
+    transition: all 0.3s ease;
+}
+
+.form-container i:hover {
+    color: #ffffff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #282828;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: #141414;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 900;
+    padding-left: 10px;
+    caret-color: aqua;
+    margin: 10px 0;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder,
+input[type="email"]::placeholder {
+    color: #aaa;
+    font-size: 20px;
+    font-weight: 400;
+    padding-left: 10px;
+}
+
+label {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 900;
+    color: rgb(68, 255, 255);
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px; 
+    font-weight: 900;
+    color: #ffffff;
+    background-color: #131313;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: aqua;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 999;
+    background-color: rgb(7, 0, 22);
+    color: rgb(255, 255, 255);
+    padding: 20px 10px;
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    scale: 0;
+    transition: all 0.3s ease;
+}
+
+.modal.active{
+    visibility: visible;
+    scale: 1;
+    opacity: 1;
+}
+
+.modal .btns{
+    display: flex;
+    justify-content: space-between;
+}
+
+#deleteConfirm{
+    background-color: red;
+    color: #e5e1e1;
+}
+
+.updateRowMain{
+    scale: 0;
+    transition: all .5s ease;
+}
+
+@media (max-width: 900px) {
+    main {
+        padding: 10px 20px;
+        flex-direction: column;
+    }
+
+    .form-container {
+        margin-right: 20px;
+    }
+
+    .form-container i {
+        top: 5px;
+        right: 5px;
+    }
+
+    form {
+        padding: 10px 20px;
+        width: 80vw;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"] {
+        height: 30px;
+    }
+
+    input[type="text"]::placeholder,
+    input[type="number"]::placeholder,
+    input[type="email"]::placeholder {
+        font-size: 16px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    button[type="submit"] {
+        height: 30px;
+        font-size: 14px;
+    }
+
+
+    .modal{
+        height: 150px;
+        width: 250px;
+    }
+
+    .modal h3{
+        font-size: 14px;
+    }
+
+    .modal .btns{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal .btns button{
+        width: 100%;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .updateRowMain{
+        scale: 1;
+        transition: all .5s ease;
+    }
+
+    .modal .btns .updateRowMain{
+        scale: 0;
+        transition: all .5s ease;
+    }
+
+    .modal .btns .deleteCancel{
+        scale: 0;
+        transition: all .5s ease;
+    }
+
+    .modal .btns .deleteConfirm{
+        scale: 0;
+        transition: all .5s ease;
+    }
+
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 10px 10px;
+        flex-direction: column;    
+    }
+
+    .form-container {
+        margin-right: 10px;
+    }
+
+    .form-container i {
+        top: 5px;
+        right: 5px;
+    }
+
+    form {
+        padding: 10px 10px;
+        width: 80vw;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"] {
+        height: 30px;
+    } 
+
+    input[type="text"]::placeholder,
+    input[type="number"]::placeholder,
+    input[type="email"]::placeholder {
+        font-size: 16px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    button[type="submit"] {
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .modal{
+        height: 150px;
+        width: 250px;
+    }
+
+    .modal .btns{   
+        flex-direction: column;
+    }
+
+    .modal .btns button{
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .modal h3{
+        font-size: 14px;
+    }
+
+    .modal p{
+        font-size: 12px;
+    } 
+
+    .modal.active{
+        scale: 1;
+    }
+
+
+}
+
+
+@media (max-width: 400px) {
+    main {
+        padding: 10px 5px;
+        flex-direction: column;
+    }
+
+    .form-container {
+        margin-right: 5px;
+    }   
+
+    .form-container i {
+        top: 5px;
+        right: 5px;
+    }
+
+    form {
+        padding: 10px 5px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"] {
+        height: 30px;
+    }
+
+    input[type="text"]::placeholder,
+    input[type="number"]::placeholder,
+    input[type="email"]::placeholder {
+        font-size: 16px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    button[type="submit"] {
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .modal{
+        height: 150px;
+        width: 250px;
+    }
+
+    .modal .btns{   
+        flex-direction: column;
+    }
+
+    .modal .btns button{
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .modal h3{
+        font-size: 14px;
+    }   
+
+    .modal p{   
+        font-size: 12px;
+    }
+
+    .modal.active{
+        scale: 1;
+    } 
+     
+
+}
+
+@media (max-width: 300px) {
+    main {
+        padding: 10px 5px;
+        flex-direction: column;
+    }
+
+    .form-container {
+        margin-right: 5px;
+    }
+
+    .form-container i {
+        top: 5px;
+        right: 5px;
+    }
+
+    form {
+        padding: 10px 5px;
+    }
+
+    input[type="text"], 
+    input[type="number"],
+    input[type="email"] {
+        height: 30px;
+    }
+
+    input[type="text"]::placeholder,    
+    input[type="number"]::placeholder,
+    input[type="email"]::placeholder {
+        font-size: 16px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    button[type="submit"] {
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .modal{
+        height: 150px;
+        width: 250px;
+    }
+
+    .modal .btns{
+        flex-direction: column;
+    }
+
+    .modal .btns button{
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .modal h3{
+        font-size: 14px;
+    }
+
+    .modal p{
+        font-size: 12px;
+    }
+
+    .modal.active{
+        scale: 1;
+    }
+}
