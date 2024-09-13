@@ -277,25 +277,12 @@ button[type="submit"] {
         font-size: 14px;
     }
 
-    .updateRowMain{
-        scale: 1;
-        transition: all .5s ease;
-    }
 
     .modal .btns .updateRowMain{
         scale: 0;
         transition: all .5s ease;
     }
 
-    .modal .btns .deleteCancel{
-        scale: 0;
-        transition: all .5s ease;
-    }
-
-    .modal .btns .deleteConfirm{
-        scale: 0;
-        transition: all .5s ease;
-    }
 
 }
 
