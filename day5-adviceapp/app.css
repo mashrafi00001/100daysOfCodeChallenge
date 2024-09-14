@@ -1,0 +1,154 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #111;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+}
+
+.container {
+    width: 600px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    background-color: #222;
+}
+
+.quote {
+    text-align: center;
+    font-size: 30px;
+    width: 500px;
+    height: 200px;
+}
+
+.dice {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: rgb(0, 255, 106);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    bottom: -40px;
+}
+
+.dice i {
+    transition: all 0.3s ease;
+    font-size: 40px;
+}
+
+.dice i:hover {
+    opacity: 0.9;
+    scale: 1.05;
+}
+
+.playpause {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.playpause i {
+    font-size: 40px;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+    color:rgb(109, 108, 108);
+}
+
+.playpause i:hover {
+    scale: 1.05;
+}
+
+.lineLeft {
+    width: 50%;
+    height: 3px;
+    background-color: rgb(109, 108, 108);
+    border-radius: 5px;
+}
+
+.lineRight {
+    width: 50%;
+    height: 3px;
+    background-color:rgb(109, 108, 108);
+    border-radius: 5px;
+}
+
+#adviceId {
+    color: aquamarine;
+    font-size: 20px;
+}
+
+.adviceId {
+    color: aquamarine;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#text {
+    color: rgb(206, 204, 204);
+    font-size: 25px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 350px;
+        height: 700px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+        padding: 10px 20px;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        background-color: #222;
+    }
+
+    .dice {
+        height: 100px;
+        width: 100px;
+        position: relative;
+        bottom: -100px;
+    }
+
+    .dice i {
+        font-size: 50px;
+    }
+
+    .playpause {
+        position: relative;
+        height: 100px;
+        width: 100%;
+        top: 200px;
+    }
+
+    .quote {    
+        font-size: 30px;
+        width: 300px;
+        height: 100px;
+    }
+}
+
