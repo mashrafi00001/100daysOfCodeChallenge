@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST Countries API</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <header>
+        <h1>Where in the world?</h1>
+    </header>
+    <main>
+        <div class="utils">
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search for a country..." id="search">
+            </div>
+
+            <div class="filter">
+                <select name="filter" id="filter">
+                    <option value="" disabled selected>Filter by Region</option>
+                    <option value="africa">Africa</option>
+                    <option value="americas">Americas</option>
+                    <option value="Antarctic">Antarctic</option>
+                    <option value="asia">Asia</option>
+                    <option value="europe">Europe</option>
+                    <option value="oceania">Oceania</option>
+                </select>
+            </div>
+        </div>
+        <div class="container">
+
+        </div>
+    </main>
+    <div class="description">
+        <div class="description_back"><button class="description_back-btn"><i class="fa-solid fa-arrow-left"></i>Back</button></div>
+        <div class="description_container">
+            <div class="des_flag">
+                <img src="" alt="" class="">
+            </div>
+            <div class="des_info">
+                <h2 class="des_name"></h2>
+                <div class="des_info_layer">
+                    <div class="des_info_part1">
+                        <p class="des_nativeName">
+                            Native Name: <span></span>
+                        </p>
+                        <p class="des_population">
+                            Population: <span></span>
+                        </p>
+                        <p class="des_region">
+                            Region: <span></span>
+                        </p>
+                        <p class="des_sub_region">
+                            Sub Region: <span></span>
+                        </p>
+                        <p class="des_capital">
+                            Capital: <span></span>
+                        </p>
+                    </div>
+                    <div class="des_info_part2">
+                        <p class="des_tld">
+                            Top Level Domain: <span></span>
+                        </p>
+                        <p class="des_currencies">
+                            Currencies: <span></span>
+                        </p>
+                        <p class="des_languages">
+                            Languages: <span></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="border_countries">
+                    <div class="box">
+                        <p>
+                            Border Countries: 
+                        </p>
+                        <div class="box2">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="app.js" defer></script>
+</body>
+
+</html>
